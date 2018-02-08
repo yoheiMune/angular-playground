@@ -1,0 +1,17 @@
+<div class="validation">
+  <h1>Form and Validation Sample</h1>
+
+  <form [formGroup]="myForm" novalidate>
+    <label>Name: <input class="form-control" formControlName="name"></label><br>
+    <label>Age: <input class="form-control" formControlName="age"></label><br>
+    <div formGroupName="address">
+      <label>Street: <input class="form-control" formControlName="street"></label><br>
+      <label>City: <input class="form-control" formControlName="city"></label><br>
+      <label>State: <input class="form-control" formControlName="state"></label><br>
+      <label>Zip: <input class="form-control" formControlName="zip"></label><br>
+    </div>
+  </form>
+  <hr>
+  <p>Form value: {{ myForm.value | json }}</p>
+  <p>Form status: {{ myForm.status || json }}</p>
+</div>
